@@ -55,6 +55,8 @@ public class CarRepository {
         String sqlQuery =
                 "SELECT id, price, wholesalePrice, model, manufacturer FROM cars WHERE UPPER(model) LIKE UPPER('%" + searchQuery + "%')" +
                         "OR UPPER(manufacturer) LIKE UPPER('%" + searchQuery + "%')";
+//        ');  insert into cars(price, wholesalePrice, model, manufacturer) values (423, 300, 'Uljez', 'Auto') --
+
         try (Connection connection = dataSource.getConnection();
              Statement statement = connection.createStatement();
              ResultSet rs = statement.executeQuery(sqlQuery)) {
