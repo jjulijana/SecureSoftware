@@ -70,7 +70,7 @@
             tds[2].textContent = car.manufacturer;
             tds[3].textContent = car.price;
             tds[4].textContent = car.wholesalePrice;
-            tds[5].innerHTML = `<a href="/cars?id=${car.id}">Details</a>`;
+            tds[5].textContent = `<a href="/cars?id=${car.id}">Details</a>`;
 
             const tbody = document.querySelector('tbody');
             tbody.appendChild(row);
@@ -85,7 +85,7 @@
 
         function updateSearchTerm(searchQuery) {
             const searchTerm = document.getElementById('searchTerm');
-            searchTerm.innerHTML = searchQuery;
+            searchTerm.textContent = searchQuery;
             searchTerm.parentElement.classList.remove('invisible');
         }
 

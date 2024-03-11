@@ -52,7 +52,7 @@
                     .then(function (result) {return result.json()})
                     .then(function(persons) {
                         const tableContent = document.getElementById("tableContent");
-                        tableContent.innerHTML = '';
+                        tableContent.textContent = '';
 
                         persons.forEach(function(person) {
                             const tableRowElement = document.createElement("tr");
@@ -72,14 +72,14 @@
                             tdElement.textContent = person.address;
                             tableRowElement.appendChild(tdElement);
                             tdElement = document.createElement("td");
-                            tdElement.innerHTML = '<a href="/persons/' + person.id + '">View profile</a>';
+                            tdElement.textContent = '<a href="/persons/' + person.id + '">View profile</a>';
                             tableRowElement.appendChild(tdElement);
 
                             tableContent.appendChild(tableRowElement);
                         });
 
                         document.getElementById('searchContainer').className = '';
-                        document.getElementById('searchTerm').innerHTML = searchTerm;
+                        document.getElementById('searchTerm').textContent = searchTerm;
                     });
             };
 

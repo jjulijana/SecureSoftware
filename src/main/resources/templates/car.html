@@ -38,7 +38,7 @@
     <h2 id="car-comments">Car comments</h2>
     <div class="form-group" th:each="comment,iter : ${comments}">
         <b th:text="${comment.personName}"></b>
-        <div class="form-control" th:id="${iter.index}" th:utext="${comment.comment}" disabled></div>
+        <div class="form-control" th:id="${iter.index}" th:text="${comment.comment}" disabled></div>
 
 <!--        <script>document.getElementById("car-comments").innerHTML = "No comments allowed!"</script>  -->
 <!--        <img src="x" onerror="document.getElementById("car-comments").textContent = 'No comments allowed!'" -->
